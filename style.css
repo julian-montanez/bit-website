@@ -1,3 +1,13 @@
 .logo_git{
     width: 100px;
 }
+
+input{
+    width: 100%;
+    width: 600px;
+    border: none;
+}
+
+fieldset{
+    width: 600px;
+}
