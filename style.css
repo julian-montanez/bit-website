@@ -5,9 +5,9 @@ body{
 }
 
 .gradiente{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.09), black 70%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.09), black 60%);
     width:  100%;
-    height: 2000px;
+    height: 2110px;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -24,6 +24,7 @@ body{
     box-shadow: 20px 20px 40px 20px black;
     border-radius: 20px;
     outline: 4px solid rgb(91, 76, 223);
+    font-family: sans-serif;
 }
 
 /*header*/
@@ -166,25 +167,49 @@ header{
     padding-top: 15px;
 }
 
-
-
-
-
-
-
-
-
-.videos{
-    margin-left: 428px;
+.grupo3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(219, 164, 13);
+    outline: 4px solid black;
+    border-radius: 20px;
+    font-family: sans-serif;
 }
 
-.grupon{
+.tabla{
+    border: 3px solid black;
+}
+
+tr, th, td{
+    border: 3px solid black;
+}
+
+.titulo-definicion2{
+    text-align: center;
+}
+
+.videos{
+    text-align: center;
+    background-color: rgb(219, 164, 13);
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 20px 400px;
+    padding: 4px 0;
+    outline: 4px solid black;
+    font-family: sans-serif;
+}
+
+.grupo4{
     display: flex;
 }
 
 .video{
     width: 400px;
-    margin-left: 45px;
+    margin-left: 35px;
     border-radius: 10px;
     outline: 5px solid rgb(219, 164, 13);
 }
@@ -198,17 +223,109 @@ header{
 
 /*footer*/
 
+.git-link{
+    margin-top: 20px;
+    display: flex;
+}
+
+.link-g{
+    margin: auto;
+}
+
+.git-img{
+    width: 100px;
+}
 
 
 
-/*otra pagina*/
 
-input{
-    width: 100%;
-    width: 600px;
-    border: none;
+/*formulario*/
+
+.navegador-formulario{
+    background-color: rgb(219, 164, 13);
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: sans-serif;
+    border-radius: 20px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.titulo-formulario{
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 fieldset{
+    margin: auto;
+    height: 310px;
     width: 600px;
+    border-radius: 20px;
+    border: 4px solid black;
+}
+
+legend{
+    padding: 0 30px;
+    margin-left: 80px;
+    color: rgb(219, 164, 13);
+    font-size: 20px;
+}
+
+.datos{
+    margin-bottom: 12px;
+}
+
+label{
+    margin-left: 15px;
+    color: rgb(219, 164, 13);
+    text-transform: capitalize;
+}
+
+.input-datos{
+    width: 600px;
+    border: none;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: rgba(219, 164, 13, 0.127);
+    border-left: 3px solid rgb(219, 164, 13);
+    border-radius: 4px;
+    height: 25px;
+}
+
+.enviar{
+    margin-left: 250px;
+    width: 60px;
+    height: 20px;
+    text-transform: capitalize;
+}
+
+
+
+/*imagenPerro*/
+
+.perro{
+    display: flex;
+    flex-direction: column;
+}
+
+.perro-titulo{
+    text-align: center;
+}
+
+.perro-imagen{
+    margin: 0 0 20px 110px;
+    width: 700px;
+    outline: 5px solid rgb(219, 164, 13);
+    border-radius: 20px;
+}
+
+.perro-audio{
+    margin: auto;
+    outline: 5px solid rgb(219, 164, 13);
+    border-radius: 30px;
 }
