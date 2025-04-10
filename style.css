@@ -1,7 +1,8 @@
 body{
     width: 100%;
-    background-image: url(assets/imagen-fondo.jpg);
+    background-image: url(assets/fondo-2-reescalado.jpeg);
     margin: 0;
+    background-size: cover;
 }
 
 .gradiente{
@@ -27,6 +28,15 @@ body{
     font-family: sans-serif;
 }
 
+:root{
+    /*fondos*/
+    --color-primario: rgb(203, 72, 43);
+    --color-secundario: #853400;
+
+    /*bordes*/
+    --color-primario-borde: rgb(14, 13, 13);
+}
+
 /*header*/
 
 header{
@@ -45,13 +55,13 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color:  rgba(241, 183, 23, 0.444);
+    background-color:  rgba(203, 72, 43, 0.412);
     border-radius: 20px 20px 0 0;
     height: 350px;
 }
 
 .foto{
-    outline: 5px solid rgb(219, 164, 13);
+    outline: 5px solid var(--color-primario);
     border-radius: 50%;
     margin-top: 45px;
 }
@@ -67,25 +77,26 @@ header{
     text-transform: capitalize;
     font-family: sans-serif;
     font-size: 30px;
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 2px var(--color-primario-borde);
 }
 
 /*navegador*/
 
 .navegador{
-    background-color: rgb(219, 164, 13);
+    background-color: var(--color-primario);
     height: 50px;
     display: flex;
     flex-direction: row-reverse;
     font-family: sans-serif;
     border-radius: 0 0 20px 20px;
+    gap: 5px;
 }
 
 .opcion{
     font-size: 25px;
     margin-top: 9px;
     margin-right: 15px;
-    background-color: #853400;
+    background-color: var(--color-secundario);
     height: 32px;
     box-sizing: border-box;
     padding: 0 10px;
@@ -105,8 +116,8 @@ header{
     padding: 0 10px;
     text-decoration: none;
     border-radius: 20px;
-    outline: 3px solid brown;
-    color: rgb(219, 164, 13);
+    outline: 3px solid var(--color-secundario);
+    color: var(--color-primario);
 }
 
 /*main*/
@@ -114,17 +125,17 @@ header{
 .grupo2{
     display: flex;
     flex-direction: row;
-    background-color: rgb(219, 164, 13); 
+    background-color: var(--color-primario); 
     margin-top: 15px;
     border-radius: 20px;
     padding: 0 30px;
     height: 212px;
     justify-content: space-around;
-    outline: 4px solid black;
+    outline: 4px solid var(--color-primario-borde);
 }
 
 .descripcion, .sobre-mi {
-    outline: 3px solid black;
+    outline: 3px solid var(--color-primario-borde);
     height: 170px;
     width: 49%;
     box-sizing: border-box;
@@ -135,13 +146,13 @@ header{
 }
 
 .estudios{
-    background-color: rgb(219, 164, 13);
+    background-color: var(--color-primario);
     border-radius: 20px;
     box-sizing: border-box;
     height: 110px;
     width: 100%;
     padding: 0 40px;
-    outline: 4px solid black;
+    outline: 4px solid var(--color-primario-borde);
     font-family: sans-serif;
     text-align: center;
 }
@@ -152,12 +163,12 @@ header{
 }
 
 .comida-favorita{
-    background-color: rgb(219, 164, 13);
+    background-color: var(--color-primario);
     border-radius: 20px;
     box-sizing: border-box;
     width: 100%;
     padding: 0 40px;
-    outline: 4px solid black;
+    outline: 4px solid var(--color-primario-borde);
     font-family: sans-serif;
     margin-top: 20px;
     padding-bottom: 15px;
@@ -175,18 +186,20 @@ header{
     margin-top: 30px;
     margin-bottom: 30px;
     padding-bottom: 20px;
-    background-color: rgb(219, 164, 13);
-    outline: 4px solid black;
+    background-color: var(--color-primario);
+    outline: 4px solid var(--color-primario-borde);
     border-radius: 20px;
     font-family: sans-serif;
 }
 
 .tabla{
-    border: 3px solid black;
+    border: 3px solid var(--color-primario-borde);
+    background-color: white;
 }
 
 tr, th, td{
-    border: 3px solid black;
+    border: 3px solid var(--color-primario-borde);
+    background-color: var(--color-primario);
 }
 
 .titulo-definicion2{
@@ -195,12 +208,12 @@ tr, th, td{
 
 .videos{
     text-align: center;
-    background-color: rgb(219, 164, 13);
+    background-color: var(--color-primario);
     border-radius: 20px;
     box-sizing: border-box;
     margin: 20px 400px;
     padding: 4px 0;
-    outline: 4px solid black;
+    outline: 4px solid var(--color-primario-borde);
     font-family: sans-serif;
 }
 
@@ -212,14 +225,14 @@ tr, th, td{
     width: 400px;
     margin-left: 35px;
     border-radius: 10px;
-    outline: 5px solid rgb(219, 164, 13);
+    outline: 5px solid var(--color-primario);
 }
 
 .link-v{
     margin-left: 30px;
     height: 300px;
     border-radius: 10px;
-    outline: 5px solid rgb(219, 164, 13);
+    outline: 5px solid var(--color-primario);
 }
 
 /*footer*/
@@ -243,7 +256,7 @@ tr, th, td{
 /*formulario*/
 
 .navegador-formulario{
-    background-color: rgb(219, 164, 13);
+    background-color: var(--color-primario);
     height: 50px;
     display: flex;
     flex-direction: row-reverse;
@@ -267,13 +280,13 @@ fieldset{
     height: 310px;
     width: 600px;
     border-radius: 20px;
-    border: 4px solid black;
+    border: 4px solid var(--color-primario-borde);
 }
 
 legend{
     padding: 0 30px;
     margin-left: 80px;
-    color: rgb(219, 164, 13);
+    color: var(--color-primario);
     font-size: 20px;
 }
 
@@ -283,7 +296,7 @@ legend{
 
 label{
     margin-left: 15px;
-    color: rgb(219, 164, 13);
+    color: var(--color-primario);
     text-transform: capitalize;
 }
 
@@ -292,10 +305,15 @@ label{
     border: none;
     font-size: 18px;
     margin-top: 10px;
-    background-color: rgba(219, 164, 13, 0.127);
-    border-left: 3px solid rgb(219, 164, 13);
+    background-color: rgba(203, 72, 43, 0.147);
+    border-left: 3px solid var(--color-primario);
     border-radius: 4px;
     height: 25px;
+}
+
+.input-datos:focus{
+    border-left: 3px solid var(--color-primario);
+    outline: 1px solid var(--color-primario);
 }
 
 .enviar{
@@ -322,12 +340,12 @@ label{
 .perro-imagen{
     margin: 0 0 20px 110px;
     width: 700px;
-    outline: 5px solid rgb(219, 164, 13);
+    outline: 5px solid var(--color-primario);
     border-radius: 20px;
 }
 
 .perro-audio{
     margin: auto;
-    outline: 5px solid rgb(219, 164, 13);
+    outline: 5px solid var(--color-primario);
     border-radius: 30px;
 }
