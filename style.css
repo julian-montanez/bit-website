@@ -11,21 +11,19 @@ body::-webkit-scrollbar {
     width: 10px;
     height: 10px;
     background-color: rgba(151, 67, 67, 0);
-    border-radius: 3px;
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: var(--color-navegador);
-    border-radius: 3px;
 }
 
 body:hover::-webkit-scrollbar-thumb {
     background-color: rgba(14, 13, 13, 0);
-    border-radius: 3px;
 }
 
 .mi-pagina{
-    width: 1350px;
+    width: 87.9vw;
+    overflow: hidden;
     background-color: rgba(255, 254, 251, 0.763);
     margin: auto;
     margin-top: 50px;
@@ -53,7 +51,6 @@ body:hover::-webkit-scrollbar-thumb {
 header{
     display: flex;
     flex-direction: column;
-
 }
 
 .grupo1{
@@ -61,6 +58,7 @@ header{
     background-size: cover;
     height: 350px;
     border-radius: 20px 20px 0 0;
+    overflow: hidden;
 }
 
 .fondo-transparente{
@@ -84,7 +82,7 @@ header{
     box-sizing: border-box;
     color: aliceblue;
     height: 130px;
-    width: 650px;
+    width: 44vw;
     text-align: center;
     text-transform: capitalize;
     font-family: sans-serif;
@@ -93,11 +91,6 @@ header{
 }
 
 /*navegador*/
-
-.logo-nav{
-    width: 55px;
-    margin-right: 400px;
-}
 
 .navegador{
     background-color: var(--color-navegador);
@@ -110,6 +103,23 @@ header{
     position: sticky;
     top: 0px;
     z-index: 1;
+    overflow: hidden;
+}
+
+.navegador-version2{
+    background-color: var(--color-navegador);
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    font-family: sans-serif;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.logo-nav{
+    width: 55px;
+    margin-right: 20vw;
 }
 
 .navegador-opciones{
@@ -118,6 +128,7 @@ header{
 }
 
 .navegador-opcion{
+    text-wrap: nowrap;
     font-size: 25px;
     margin-top: 9px;
     margin-right: 15px;
@@ -150,15 +161,16 @@ header{
 
 .contenedor-sobreMi{
     display: grid;
-    grid-template-columns: 500px 500px;
-    background-image: url(./assets/354276-admin.jpg); 
+    grid-template-rows: 200px 200px;
+    background-image: url(./assets/edificios.jpg); 
     background-size: cover;
     margin-top: 15px;
     border-radius: 20px;
-    height: 212px;
-    justify-content: space-around;
+    height: 400px;
+    padding-left: 8%;
+    padding-bottom: 10px;
     outline: 4px solid var(--color-primario-borde);
-
+    overflow: hidden;
 }
 
 /* main - tarjeta giratorio - descripcion y sobre mi*/
@@ -166,7 +178,6 @@ header{
 .descripcion, .sobre-mi {
     position: relative;
     height: 170px;
-    width: 500px;
     box-sizing: border-box;
     margin-top: 20px;
     text-align: center;
@@ -175,14 +186,22 @@ header{
 
 .descripcion .face, .sobre-mi .face{
     position: absolute;
-    width: 500px;
+    width: 46.8vw;
     height: 170px;
     backface-visibility: hidden;
     overflow: hidden;
-    transition: 3s;
+    transition: 2s;
     border-radius: 20px;
     outline: 2px solid black;
     background-color: rgba(255, 255, 255, 0.148);
+}
+
+.descripcion, .sobre-mi{
+    width: 46.8vw;
+}
+
+.sobre-mi{
+    margin-left: 23vw;
 }
 
 .descripcion .front, .sobre-mi .front{
@@ -208,6 +227,7 @@ header{
     transform: perspective(700px) rotateY(180deg);
     box-shadow: 0 5px 10px black ;
     background-color: var(--color-primario);
+    box-sizing: border-box;
 }
 
 .descripcion:hover .front, .sobre-mi:hover .front{
@@ -220,22 +240,76 @@ header{
 
 /* main - comida favorita*/
 
-.titulo-comida{
-    text-align: center;
-    padding-top: 15px;
-}
-
 .comida-favorita{
-    background-color: var(--color-primario);
+    background-image: url(./assets/restaurante.jpg);
+    background-size: cover;
     border-radius: 20px;
     box-sizing: border-box;
     width: 100%;
-    padding: 0 40px;
+    height: 500px;
+    padding: 30px;
     outline: 4px solid var(--color-primario-borde);
     font-family: sans-serif;
     margin-top: 20px;
     padding-bottom: 15px;
 }
+
+.comida {
+    margin: auto;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    height: 400px;
+    width: 65vw;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-top: 20px;
+    outline: 2px solid white;
+}
+
+.comida .face{
+    height: 400px;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.comida-contenedor{
+    transform: translate(0px, 0px);
+    transition: 1s;
+}
+
+.comida-contenedor:hover{
+    transform: translate(0px, -400px);
+}
+
+.comida .comida-fondo{
+    background-image: url(./assets/pizza.jpg);
+    background-size: cover;
+    height: 400px;
+    padding-top: 30px;
+}
+
+.titulo-comida{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    -webkit-text-stroke: 3px black;
+}
+
+.comida .secundaria{
+    width: 55.5vw;
+    height: 350px;
+    margin: auto;
+    color: white;
+    border-radius: 20px;
+    background-color: rgba(184, 87, 65, 0.696);
+    font-size: 1em;
+    overflow: hidden;
+}
+
+
+
 
 /*footer*/
 
@@ -248,7 +322,7 @@ footer{
     position: relative;
     left: -50px;
     bottom: -50px;
-    width: 1350px;
+    width: 87.9vw;
     height: 150px;
 }
 
@@ -282,15 +356,15 @@ footer{
     background-color: white;
 }
 
-.git-link{
-    margin: 20px;
-    display: flex;
-}
-
 .titulo-redes{
     text-align: center;
     color: white;
     margin-top: 25px;
+}
+
+.git-link{
+    margin: 20px;
+    display: flex;
 }
 
 .link-social{
@@ -304,16 +378,7 @@ footer{
 
 
 
-/*formulario*/
-
-.navegador-formulario{
-    background-color: var(--color-navegador);
-    height: 50px;
-    display: flex;
-    flex-direction: row-reverse;
-    font-family: sans-serif;
-    border-radius: 20px;
-}
+/*contacto*/
 
 .formulario{
     display: flex;
@@ -329,14 +394,14 @@ footer{
 fieldset{
     margin: auto;
     height: 310px;
-    width: 600px;
+    width: 40vw;
     border-radius: 20px;
     border: 4px solid var(--color-primario-borde);
 }
 
 legend{
     padding: 0 30px;
-    margin-left: 80px;
+    margin-left: 6vw;
     color: var(--color-primario);
     font-size: 20px;
 }
@@ -352,7 +417,7 @@ label{
 }
 
 .input-datos{
-    width: 600px;
+    width: 40vw;
     border: none;
     font-size: 18px;
     margin-top: 10px;
@@ -368,7 +433,7 @@ label{
 }
 
 .enviar{
-    margin-left: 250px;
+    margin-left: 17vw;
     width: 60px;
     height: 20px;
     text-transform: capitalize;
@@ -381,11 +446,11 @@ label{
 
 .carrusel{
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
     overflow-x: scroll;
     border-radius: 20px;
-    background-color: var(--color-primario);
+    background-image: url(./assets/imagen\ de\ fondo\ videos.jpg);
+    background-size: cover;
     height: 400px;
     outline: 3px solid black;
 }
@@ -394,25 +459,22 @@ label{
     width: 10px;
     height: 20px;
     background-color: rgba(151, 67, 67, 0);
-    border-radius: 3px;
 }
 
 .carrusel::-webkit-scrollbar-thumb {
-    background-color: #853400;
+    background-color: #853300;
     border-radius: 20px 20px 100px 100px;
 }
 
-.carruselover::-webkit-scrollbar-thumb {
-    background-color: rgba(14, 13, 13, 0);
-    border-radius: 3px;
-}
-
-.videos{
+.videos-titulo{
     text-align: center;
     background-color: var(--color-primario);
     border-radius: 20px;
     box-sizing: border-box;
-    margin: 20px 400px;
+    width: 30vw;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 4px 0;
     outline: 4px solid var(--color-primario-borde);
     font-family: sans-serif;
@@ -420,7 +482,7 @@ label{
 
 .video{
     width: 400px;
-    margin-left: 35px;
+    margin: 0 35px;
     border-radius: 10px;
     outline: 5px solid var(--color-primario-borde);
 }
@@ -430,20 +492,20 @@ label{
 
 /* estudios */
 
-.estudios-titulo{
-    padding-top: 10px;
-}
-
 .estudios{
     background-color: var(--color-primario);
     border-radius: 20px;
     box-sizing: border-box;
-    height: 110px;
     width: 100%;
     padding: 0 40px;
     outline: 4px solid var(--color-primario-borde);
     font-family: sans-serif;
     text-align: center;
+    padding-bottom: 20px;
+}
+
+.estudios-titulo{
+    padding-top: 10px;
 }
 
 .estudios-tabla{
@@ -451,11 +513,12 @@ label{
     flex-direction: column;
     justify-content: center;
     margin-top: 30px;
-    padding-bottom: 20px;
+    padding: 20px;
     background-color: var(--color-primario);
     outline: 4px solid var(--color-primario-borde);
     border-radius: 20px;
     font-family: sans-serif;
+    overflow: hidden;
 }
 
 .titulo-tabla{
@@ -475,4 +538,201 @@ tr, th, td{
 
 .titulo-definicion2{
     text-align: center;
+}
+
+
+
+
+
+/* responsive */
+
+/*992px*/
+
+@media screen and (max-width: 992px) {
+
+    /*header*/
+
+    .foto{
+        height: 250px;
+        width: 200px;
+        margin-left: 20px;
+    }
+    
+    .nombre-titulo{
+        font-size: 35px;
+        margin-left: 10px;
+    }
+
+    /*navegador*/
+
+    .logo-nav{
+        margin-right: 50px;
+    }
+
+    /*main*/
+
+    .contenedor-sobreMi{
+        padding-bottom: 35px;
+    }
+
+    /* main - tarjeta giratorio - descripcion y sobre mi*/
+
+    .descripcion .face, .sobre-mi .face{
+        width: 64.5vw;
+        height: 170px;
+        margin-top: 15px;
+    }
+    .descripcion .front h3, .sobre-mi .front h3{
+        margin-top: 55px;
+    }
+    .descripcion .back, .sobre-mi .back{
+        font-size: 14px;
+        padding: 20px;
+    }
+    .sobre-mi .face{
+        margin-left: 0px;
+    }
+    .sobre-mi{
+        margin-left: 0px;
+    }
+
+    /* main - comida favorita*/
+
+    .comida-favorita{
+        height: 450px;
+        padding: 10px;
+    }
+    .comida {
+        width: 95.2%;
+    }
+    .titulo-comida{
+        margin-top: 60px;
+        font-size: 80px;
+    }
+    .comida .comida-fondo{
+        padding: 20px;
+    }
+    .comida .secundaria{
+        margin-top: 30px;
+        width: 100%;
+        height: 300px;
+        background-color: rgba(184, 87, 65, 0.696);
+        font-size: .8em;
+    }
+
+}
+
+
+
+
+
+/* 768px */
+
+@media screen and (max-width: 768px) {
+
+    .mi-pagina{
+        width: 88.4%;
+    }
+
+    /*header*/
+
+    .foto{
+        height: 250px;
+        width: 200px;
+        margin-left: 20px;
+    }
+    
+    .nombre-titulo{
+        font-size: 35px;
+        margin-left: 10px;
+    }
+
+    /*navegador*/
+
+    .logo-nav{
+        margin-right: 5px;
+    }
+    .navegador-opcion{
+        font-size: 20px;
+        height: 30px;
+        padding-top: 2px;
+    }
+
+    /*main*/
+
+    .contenedor-sobreMi{
+        padding-bottom: 35px;
+    }
+
+    /* main - tarjeta giratorio - descripcion y sobre mi*/
+
+    .descripcion .face, .sobre-mi .face{
+        width: 90%;
+        height: 170px;
+        margin-top: 15px;
+    }
+    .descripcion .front h3, .sobre-mi .front h3{
+        margin-top: 48px;
+    }
+    .descripcion .back, .sobre-mi .back{
+        font-size: 13px;
+        padding: 10px;
+    }
+    .sobre-mi .face{
+        margin-left: 0px;
+    }
+
+    /* main - comida favorita*/
+
+    .comida-favorita{
+        height: 450px;
+        padding: 10px;
+    }
+    .comida {
+        width: 95.2%;
+    }
+    .titulo-comida{
+        margin-top: 60px;
+        font-size: 80px;
+    }
+    .comida .comida-fondo{
+        padding: 20px;
+    }
+    .comida .secundaria{
+        margin-top: 30px;
+        width: 100%;
+        height: 300px;
+        background-color: rgba(184, 87, 65, 0.696);
+        font-size: .7em;
+    }
+
+    /*footer*/
+
+    .logo-footer{
+        height: 120px;
+        width: 120px;
+        margin: auto;
+    }
+    .contactame{
+        margin-top: 13px;
+        font-size: 13px;
+    }
+    .separador{
+        margin-left: 15px;
+    }
+    .titulo-redes{
+        color: white;
+        font-size: 19px;
+    }
+    .img-social{
+        width: 35px;
+    }
+
+
+}
+
+/* 576px */
+
+@media screen and (max-width: 576px) {
+
 }
