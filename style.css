@@ -53,7 +53,7 @@ header{
     flex-direction: column;
 }
 
-.grupo1{
+.encabezado{
     background-image: url(assets/fondo-de-programacion.jpg);
     background-size: cover;
     height: 350px;
@@ -104,6 +104,7 @@ header{
     top: 0px;
     z-index: 1;
     overflow: hidden;
+    padding: 0 10px;
 }
 
 .navegador-version2{
@@ -119,7 +120,7 @@ header{
 
 .logo-nav{
     width: 55px;
-    margin-right: 20vw;
+    margin-right: 10px;
 }
 
 .navegador-opciones{
@@ -167,7 +168,7 @@ header{
     margin-top: 15px;
     border-radius: 20px;
     height: 400px;
-    padding-left: 8%;
+    padding-left: 6vw;
     padding-bottom: 10px;
     outline: 4px solid var(--color-primario-borde);
     overflow: hidden;
@@ -287,6 +288,7 @@ header{
     background-size: cover;
     height: 400px;
     padding-top: 30px;
+    box-sizing: border-box;
 }
 
 .titulo-comida{
@@ -306,6 +308,7 @@ header{
     background-color: rgba(184, 87, 65, 0.696);
     font-size: 1em;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 
@@ -342,6 +345,7 @@ footer{
 
 .contactame-opciones{
     list-style: none;
+    text-wrap: wrap;
 }
 
 .link-correo, .link-tel{
@@ -472,6 +476,7 @@ label{
     border-radius: 20px;
     box-sizing: border-box;
     width: 30vw;
+    min-width: 170px;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -565,9 +570,18 @@ tr, th, td{
 
     /*navegador*/
 
+    .navegador{
+        padding: 0 10px;
+    }
     .logo-nav{
         margin-right: 50px;
     }
+    .navegador-version2 .navegador-opcion{
+        font-size: 22px;
+        padding-top: 2px;
+    }
+    
+
 
     /*main*/
 
@@ -630,10 +644,6 @@ tr, th, td{
 
 @media screen and (max-width: 768px) {
 
-    .mi-pagina{
-        width: 88.4%;
-    }
-
     /*header*/
 
     .foto{
@@ -643,8 +653,10 @@ tr, th, td{
     }
     
     .nombre-titulo{
-        font-size: 35px;
+        font-size: 32px;
         margin-left: 10px;
+        margin-top: 20px;
+
     }
 
     /*navegador*/
@@ -657,6 +669,25 @@ tr, th, td{
         height: 30px;
         padding-top: 2px;
     }
+    .logo-nav{
+        margin-left: 10px;
+    }
+    .navegador-version2{
+        padding: 2px;
+        flex-wrap: wrap;
+        height: 96px;
+    }
+    .navegador-version2 .navegador-opciones{
+        margin-left: 16px;
+        margin-bottom: 5px;
+
+    }
+    .navegador-version2 > .navegador-opcion{
+        font-size: 18px;
+        padding-top: 2px;
+    }
+
+
 
     /*main*/
 
@@ -667,19 +698,16 @@ tr, th, td{
     /* main - tarjeta giratorio - descripcion y sobre mi*/
 
     .descripcion .face, .sobre-mi .face{
-        width: 90%;
+        width: 64vw;
         height: 170px;
         margin-top: 15px;
     }
     .descripcion .front h3, .sobre-mi .front h3{
-        margin-top: 48px;
+        margin-top: 55px;
     }
     .descripcion .back, .sobre-mi .back{
         font-size: 13px;
-        padding: 10px;
-    }
-    .sobre-mi .face{
-        margin-left: 0px;
+        padding: 20px;
     }
 
     /* main - comida favorita*/
@@ -728,11 +756,141 @@ tr, th, td{
         width: 35px;
     }
 
-
 }
+
+
+
+
 
 /* 576px */
 
 @media screen and (max-width: 576px) {
 
+    .mi-pagina{
+        width: 500px;
+    }
+
+    /*header*/
+
+    .encabezado{
+        height: 270px;
+    }
+    .foto{
+        height: 180px;
+        width: 130px;
+    }
+    .nombre-titulo{
+        font-size: 25px;
+    }
+    
+    /*navegador*/
+    
+    .logo-nav{
+        height: 50px;
+        width: 50px;
+    }
+    .navegador{
+        flex-wrap: wrap;
+        height: 90px;
+    }
+    .navegador-opciones{
+        margin-left: 15px;
+    }
+    .navegador-opcion{
+        font-size: 18px;
+    }
+    .navegador-version2{
+        height: 170px;
+    }
+    .navegador-version2 .navegador-opciones{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /*main*/
+    
+    .contenedor-sobreMi{
+        padding-left: 13px;
+    }
+
+    /* main - tarjeta giratorio - descripcion y sobre mi*/
+
+    .descripcion .face, .sobre-mi .face{
+        width: 367px;
+    }
+    
+    /* main - comida favorita*/
+    
+    .comida-favorita{
+        height: 400px;
+        padding: 10px;
+    }
+    .comida {
+        height: 350px;
+    }
+    .titulo-comida{
+        margin-top: 25px;
+        font-size: 70px;
+    }
+    .comida .comida-fondo{
+        height: 350px;
+        padding-top: 10px;
+    }
+    .comida .face{
+        height: 350px;;
+    }
+    .comida .secundaria{
+        font-size: .6em;
+        padding-bottom: 10px;
+        margin-top: 0;
+        height: 330px;
+        padding-top: 10px;
+    }
+    .comida-contenedor:hover{
+        transform: translate(0px, -350px);
+    }
+    
+    /*footer*/
+    
+    footer{
+        width: 500px;
+    }
+    .logo-footer{
+        height: 120px;
+        width: 120px;
+        margin-left: 0;
+    }
+    .contactame{
+        margin-top: 25px;
+        font-size: 11px;
+    }
+    .separador{
+        margin-left: 15px;
+    }
+    .titulo-redes{
+        color: white;
+        font-size: 16px;
+        margin-right: 30px;
+    }
+    .img-social{
+        width: 35px;
+    }
+    .git-link{
+        display: grid;
+        grid-template-columns: 40px 40px;
+        grid-template-rows: 40px 40px;
+        margin-right: 60px;
+        margin-top: 0px;
+    }
+
+    /*videos favoritos*/
+
+    .carrusel{
+        height: 320px;
+    }
+    .video{
+        height: 250px;
+        width: 334px;
+    }
 }
