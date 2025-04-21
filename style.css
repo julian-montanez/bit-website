@@ -76,7 +76,7 @@ header{
 }
 
 .nombre-titulo{
-    margin-top: 50px;
+    margin-top: 30px;
     margin-right: 10px;
     box-sizing: border-box;
     color: aliceblue;
@@ -137,7 +137,7 @@ header{
     box-sizing: border-box;
     padding: 0 10px;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: 3px solid white;
     color: white;
     transition: 0.3s;
@@ -152,7 +152,7 @@ header{
     box-sizing: border-box;
     padding: 0 10px;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: 3px solid var(--color-secundario);
     color: var(--color-primario);
 }
